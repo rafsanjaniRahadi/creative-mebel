@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- mebel.bahan tree view -->
+    <record id="mebel_bahan_view_tree" model="ir.ui.view">
+        <field name="name">Bahan</field>
+        <field name="model">mebel.bahan</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="name_bahan"/>
+                <field name="keterangan"/>
+                <field name="tipe_bahan"/>
+                <field name="harga"/>
+                <field name="jumlah_tersedia"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- mebel.bahan form view -->
+    <record id="mebel_bahan_view_form" model="ir.ui.view">
+        <field name="name">Bahan</field>
+        <field name="model">mebel.bahan</field>
+        <field name="arch" type="xml">
+            <form string="Daftar bahan">
+                <sheet>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="name_bahan"/>
+                        <field name="keterangan"/>
+                        <field name="tipe_bahan"/>
+                        <field name="jumlah_tersedia"/>
+                    </group>
+
+                    <group>
+                        <field name="harga"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- mebel.bahan action window -->
+    <record id="mebel_bahan_action" model="ir.actions.act_window">
+        <field name="name">Bahan</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">mebel.bahan</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="mebel_bahan_menu_act" name="Bahan Baku" parent="mebel_material_menu_categ" action="mebel_bahan_action" sequence="10"/>
+</odoo>

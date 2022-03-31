@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- mebel.produksi tree view -->
+    <record id="mebel_produksi_view_tree" model="ir.ui.view">
+        <field name="name">produksi</field>
+        <field name="model">mebel.produksi</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="name_produksi"/>
+                <field name="biaya_produksi"/>
+                <field name="duration"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- mebel.produksi form view -->
+    <record id="mebel_produksi_view_form" model="ir.ui.view">
+        <field name="name">produksi</field>
+        <field name="model">mebel.produksi</field>
+        <field name="arch" type="xml">
+            <form string="Daftar produksi">
+                <sheet>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="name_produksi"/>
+                        <field name="biaya_produksi"/>
+                        <field name="duration"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- mebel.produksi action window -->
+    <record id="mebel_produksi_action" model="ir.actions.act_window">
+        <field name="name">produksi</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">mebel.produksi</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="mebel_produksi_menu_act" name="Produksi" parent="mebel_produksi_menu_categ" action="mebel_produksi_action" sequence="10"/>
+</odoo>

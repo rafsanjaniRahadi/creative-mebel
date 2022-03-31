@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- mebel.produk tree view -->
+    <record id="mebel_produk_view_tree" model="ir.ui.view">
+        <field name="name">produk</field>
+        <field name="model">mebel.produk</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="name_produk"/>
+                <field name="jenis_mebel"/>
+                <field name="gaya"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- mebel.produk form view -->
+    <record id="mebel_produk_view_form" model="ir.ui.view">
+        <field name="name">produk</field>
+        <field name="model">mebel.produk</field>
+        <field name="arch" type="xml">
+            <form string="Daftar produk">
+                <sheet>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="name_produk"/>
+                        <field name="jenis_mebel"/>
+                        <field name="gaya"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- mebel.produk action window -->
+    <record id="mebel_produk_action" model="ir.actions.act_window">
+        <field name="name">produk</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">mebel.produk</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="mebel_produk_menu_act" name="Produk Jadi (default)" parent="mebel_produk_menu_categ" action="mebel_produk_action" sequence="10"/>
+</odoo>
