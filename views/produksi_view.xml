@@ -7,7 +7,7 @@
         <field name="arch" type="xml">
             <tree>
                 <!-- Add your fields here -->
-                <field name="name_produksi"/>
+                <field name="nama_produksi"/>
                 <field name="harga_produksi"/>
                 <field name="durasi"/>
             </tree>
@@ -23,7 +23,7 @@
                 <sheet>
                     <group>
                         <!-- Add your fields here -->
-                        <field name="name_produksi"/>
+                        <field name="nama_produksi"/>
                         <field name="harga_produksi"/>
                         <field name="durasi"/>
                     </group>

@@ -13,8 +13,6 @@ class Pembuatan(models.Model):
     # QTY = fields.Char(string='Jumlah Mebel')
     total = fields.Integer(compute='_compute_total', string='Total', store=True)
 
-    # add to produk
-
     @api.depends('buatbarudetail_ids')
     def _compute_total(self):
         for record in self:

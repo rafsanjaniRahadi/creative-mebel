@@ -30,7 +30,7 @@
         'views/bahan_view.xml',
         'views/produk_view.xml',
         'views/produksi_view.xml',
-
+        'views/pembuatan_view.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

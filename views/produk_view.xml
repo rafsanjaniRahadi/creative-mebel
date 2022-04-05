@@ -2,12 +2,12 @@
 <odoo>
     <!-- mebel.produk tree view -->
     <record id="mebel_produk_view_tree" model="ir.ui.view">
-        <field name="name">produk</field>
+        <field name="name">Produk</field>
         <field name="model">mebel.produk</field>
         <field name="arch" type="xml">
             <tree>
                 <!-- Add your fields here -->
-                <field name="name_produk"/>
+                <field name="nama_produk"/>
                 <field name="jenis_mebel"/>
                 <field name="gaya"/>
             </tree>
@@ -16,14 +16,14 @@
 
     <!-- mebel.produk form view -->
     <record id="mebel_produk_view_form" model="ir.ui.view">
-        <field name="name">produk</field>
+        <field name="name">Produk</field>
         <field name="model">mebel.produk</field>
         <field name="arch" type="xml">
             <form string="Daftar produk">
                 <sheet>
                     <group>
                         <!-- Add your fields here -->
-                        <field name="name_produk"/>
+                        <field name="nama_produk"/>
                         <field name="jenis_mebel"/>
                         <field name="gaya"/>
                     </group>
@@ -34,7 +34,7 @@
 
     <!-- mebel.produk action window -->
     <record id="mebel_produk_action" model="ir.actions.act_window">
-        <field name="name">produk</field>
+        <field name="name">Produk</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">mebel.produk</field>
         <field name="view_mode">tree,form</field>

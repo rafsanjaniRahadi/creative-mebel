@@ -1,6 +1,7 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_mebel_bahan,access.mebel.bahan,model_mebel_bahan,,1,1,1,1
 access_mebel_produk,access.mebel.produk,model_mebel_produk,,1,1,1,1
+access_mebel_produksi,access.mebel.produksi,model_mebel_produksi,,1,1,1,1
 access_mebel_pembuatan,access.mebel.pembuatan,model_mebel_pembuatan,,1,1,1,1
 access_mebel_buatbaru,access.mebel.buatbaru,model_mebel_buatbaru,,1,1,1,1
 

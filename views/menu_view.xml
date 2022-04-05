@@ -8,4 +8,6 @@
     <menuitem id="mebel_produk_menu_categ" name="Produk" parent="mebel_menu_root" sequence="30"/>
     <!-- This Menu Item Must have a parent -->
     <menuitem id="mebel_produksi_menu_categ" name="Produksi" parent="mebel_menu_root" sequence="40"/>
+    <!-- This Menu Item Must have a parent -->
+    <menuitem id="mebel_pembuatan_menu_categ" name="Pembuatan" parent="mebel_menu_root" sequence="50"/>
 </odoo>
