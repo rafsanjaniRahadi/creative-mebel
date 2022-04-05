@@ -8,8 +8,8 @@
             <tree>
                 <!-- Add your fields here -->
                 <field name="name_produksi"/>
-                <field name="biaya_produksi"/>
-                <field name="duration"/>
+                <field name="harga_produksi"/>
+                <field name="durasi"/>
             </tree>
         </field>
     </record>
@@ -24,8 +24,8 @@
                     <group>
                         <!-- Add your fields here -->
                         <field name="name_produksi"/>
-                        <field name="biaya_produksi"/>
-                        <field name="duration"/>
+                        <field name="harga_produksi"/>
+                        <field name="durasi"/>
                     </group>
                 </sheet>
             </form>
@@ -42,4 +42,5 @@
 
     <!-- This Menu Item must have a parent and an action -->
     <menuitem id="mebel_produksi_menu_act" name="Produksi" parent="mebel_produksi_menu_categ" action="mebel_produksi_action" sequence="10"/>
+
 </odoo>

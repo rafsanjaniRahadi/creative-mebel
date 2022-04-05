@@ -1,3 +1,3 @@
 # -*- coding: utf-8 -*-
 
-from . import bahan, produk, produksi
+from . import bahan, produk, produksi, pembuatan
