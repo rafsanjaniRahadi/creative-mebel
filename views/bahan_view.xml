@@ -7,10 +7,10 @@
         <field name="arch" type="xml">
             <tree>
                 <!-- Add your fields here -->
-                <field name="nama_bahan"/>
+                <field name="name"/>
                 <field name="tipe_bahan"/>
-                <field name="harga"/>
                 <field name="jumlah_tersedia"/>
+                <field name="harga_bahan"/>
                 <field name="keterangan"/>
             </tree>
         </field>
@@ -25,14 +25,14 @@
                 <sheet>
                     <group>
                         <!-- Add your fields here -->
-                        <field name="nama_bahan"/>
+                        <field name="name"/>
                         <field name="tipe_bahan"/>
                         <field name="jumlah_tersedia"/>
                         <field name="keterangan"/>
                     </group>
 
                     <group>
-                        <field name="harga"/>
+                        <field name="harga_bahan"/>
                     </group>
                 </sheet>
             </form>

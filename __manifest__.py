@@ -18,7 +18,7 @@
     # for the full list
     'category': 'Manufacturing',
     'version': '0.1',
-    'application' : True,
+    'application': True,
 
     # any module necessary for this one to work correctly
     'depends': ['base'],
@@ -30,7 +30,7 @@
         'views/bahan_view.xml',
         'views/produk_view.xml',
         'views/produksi_view.xml',
-        'views/pembuatan_view.xml',
+        # 'views/layanan_view.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

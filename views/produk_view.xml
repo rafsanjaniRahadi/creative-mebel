@@ -7,25 +7,36 @@
         <field name="arch" type="xml">
             <tree>
                 <!-- Add your fields here -->
-                <field name="nama_produk"/>
-                <field name="jenis_mebel"/>
-                <field name="gaya"/>
+                <field name="name"/>
+                <field name="harga_jadi"/>
             </tree>
         </field>
     </record>
 
     <!-- mebel.produk form view -->
     <record id="mebel_produk_view_form" model="ir.ui.view">
-        <field name="name">Produk</field>
+        <field name="name">Form Produk</field>
         <field name="model">mebel.produk</field>
         <field name="arch" type="xml">
             <form string="Daftar produk">
                 <sheet>
                     <group>
                         <!-- Add your fields here -->
-                        <field name="nama_produk"/>
-                        <field name="jenis_mebel"/>
-                        <field name="gaya"/>
+                        <field name="name"/>
+                        <field name="harga_jadi"/>
+                        <field name="bahandetail_ids">
+                            <tree editable="bottom">
+                                <field name="bahan_id"/>
+                                <field name="qty_require"/>
+                                <field name="harga_bahan_detail" sum="Total"/>
+                            </tree>
+                        </field>
+                        <field name="produksidetail_ids">
+                            <tree editable="bottom">
+                                <field name="produksi_id"/>
+                                <field name="harga_produksi_detail" sum="Total"/>
+                            </tree>
+                        </field>
                     </group>
                 </sheet>
             </form>

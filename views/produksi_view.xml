@@ -2,12 +2,12 @@
 <odoo>
     <!-- mebel.produksi tree view -->
     <record id="mebel_produksi_view_tree" model="ir.ui.view">
-        <field name="name">produksi</field>
+        <field name="name">Produksi</field>
         <field name="model">mebel.produksi</field>
         <field name="arch" type="xml">
             <tree>
                 <!-- Add your fields here -->
-                <field name="nama_produksi"/>
+                <field name="name"/>
                 <field name="harga_produksi"/>
                 <field name="durasi"/>
             </tree>
@@ -23,7 +23,7 @@
                 <sheet>
                     <group>
                         <!-- Add your fields here -->
-                        <field name="nama_produksi"/>
+                        <field name="name"/>
                         <field name="harga_produksi"/>
                         <field name="durasi"/>
                     </group>

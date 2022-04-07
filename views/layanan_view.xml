@@ -7,7 +7,7 @@
         <field name="arch" type="xml">
             <tree>
                 <!-- Add your fields here -->
-                <field name="nama_mebel"/>
+                <field name="name_mebel"/>
                 <field name="tanggal_pesan"/>
                 <field name="tanggal_jadi"/>
                 <field name="total"/>
@@ -23,7 +23,7 @@
             <form string="Pembuatan Detail">
                 <sheet>
                     <group>
-                        <field name="nama_mebel"/>
+                        <field name="name_mebel"/>
                         <field name="tanggal_pesan"/>
                         <field name="tanggal_jadi"/>
                         <field name="total"/>
@@ -40,11 +40,6 @@
         <field name="view_mode">tree,form</field>
     </record>
     <!-- This Menu Item must have a parent and an action -->
-    <menuitem
-        id="mebel_pembuatan_menu_act"
-        name="pembuatan Mebel"
-        parent="mebel_pembuatan_menu_categ"
-        action="mebel_pembuatan_action"
-        sequence="20"/>
+    <menuitem id="mebel_pembuatan_menu_act" name="pembuatan Mebel" parent="mebel_pembuatan_menu_categ" action="mebel_pembuatan_action" sequence="20"/>
 
 </odoo>
