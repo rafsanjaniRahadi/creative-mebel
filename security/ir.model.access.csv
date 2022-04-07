@@ -5,4 +5,6 @@ access_mebel_produksi,access.mebel.produksi,model_mebel_produksi,,1,1,1,1
 access_mebel_produk,access.mebel.produk,model_mebel_produk,,1,1,1,1
 access_mebel_bahandetail,access.mebel.bahandetail,model_mebel_bahandetail,,1,1,1,1
 access_mebel_produksidetail,access.mebel.produksidetail,model_mebel_produksidetail,,1,1,1,1
+access_mebel_buatbaru,access.mebel.buatbaru,model_mebel_buatbaru,,1,1,1,1
+access_mebel_produkdetail,access.mebel.produkdetail,model_mebel_produkdetail,,1,1,1,1
 

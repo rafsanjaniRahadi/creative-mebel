@@ -28,9 +28,9 @@
         'security/ir.model.access.csv',
         'views/menu_view.xml',
         'views/bahan_view.xml',
-        'views/produk_view.xml',
         'views/produksi_view.xml',
-        # 'views/layanan_view.xml',
+        'views/produk_view.xml',
+        'views/buatbaru_view.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

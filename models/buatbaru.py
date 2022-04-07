@@ -5,16 +5,33 @@ class BuatBaru(models.Model):
     _name = 'mebel.buatbaru'
     _description = 'Layanan untuk pembuatan mebel baru'
 
-    name = fields.Char(string='Name', required=False)
+    produkdetail_ids= fields.One2many(comodel_name='mebel.produkdetail',
+                                      inverse_name='buatbaru_id',
+                                      string='Produk Detail',
+                                      required=False)
+
+    name = fields.Char(string='Name')
     tanggal_pesan = fields.Datetime('Tanggal Pembuatan', default=fields.Datetime.now())
     tanggal_jadi = fields.Date(string='Tanggal Pengiriman')
     qty = fields.Integer(string='Quantity')
-    harga = fields.Integer(compute='_compute_harga_total_bb', string='harga')
+    total = fields.Integer(compute='_compute_total', string='harga')
+
+    @api.depends('produkdetail_ids', 'qty')
+    def _compute_total(self):
+        for record in self:
+            a = sum(self.env['mebel.produkdetail'].search([('produk_id', '=', record.id)]).mapped('harga_satuan'))
+            record.total = a * record.qty
+
+class ProdukDetail(models.Model):
+    _name = 'mebel.produkdetail'
+    _description = 'Detail untuk pembuatan mebel baru'
+
+    buatbaru_id = fields.Many2one(comodel_name='mebel.buatbaru',string='Buatbaru_id',required=False)
 
     # base on produk
-    produk_id = fields.Many2one(comodel_name='mebel.produk', string='produk' )
+    produk_id = fields.Many2one(comodel_name='mebel.produk', string='produk')
 
-    name_produk = fields.Char(string='Name')
+    name = fields.Char(string='Nama Produk')
     harga_satuan = fields.Integer(compute='_compute_harga_satuan', string='harga_satuan')
 
     @api.depends('produk_id')
@@ -22,7 +39,9 @@ class BuatBaru(models.Model):
         for record in self:
             record.harga_satuan = record.produk_id.harga_jadi
 
-    @api.depends('qty','harga_satuan')
-    def _compute_harga_total_bb(self):
-        for record in self:
-           record.harga_total_bb = record.harga_satuan * record.qty
+
+
+
+
+
+

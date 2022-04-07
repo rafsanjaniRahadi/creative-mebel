@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- mebel.buatbaru tree view -->
+    <record id="mebel_buatbaru_view_tree" model="ir.ui.view">
+        <field name="name">buatbaru</field>
+        <field name="model">mebel.buatbaru</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="name"/>
+                <field name="tanggal_pesan"/>
+                <field name="tanggal_jadi"/>
+                <field name="qty"/>
+                <field name="total"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- mebel.buatbaru form view -->
+    <record id="mebel_buatbaru_view_form" model="ir.ui.view">
+        <field name="name">buatbaru</field>
+        <field name="model">mebel.buatbaru</field>
+        <field name="arch" type="xml">
+            <form string="Daftar buatbaru">
+                <sheet>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="name"/>
+                        <field name="tanggal_pesan"/>
+                        <field name="tanggal_jadi"/>
+                        <field name="qty"/>
+                        <field name="total"/>
+                        <field name="produkdetail_ids">
+                            <tree editable="bottom">
+                                <field name="produk_id"/>
+                                <field name="harga_satuan" sum="Total"/>
+                            </tree>
+                        </field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- mebel.buatbaru action window -->
+    <record id="mebel_buatbaru_action" model="ir.actions.act_window">
+        <field name="name">buatbaru</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">mebel.buatbaru</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="mebel_buatbaru_menu_act"
+              name="Buat Baru"
+              parent="mebel_layanan_menu_categ"
+              action="mebel_buatbaru_action"
+              sequence="20"/>
+
+</odoo>

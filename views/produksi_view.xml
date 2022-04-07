@@ -41,6 +41,10 @@
     </record>
 
     <!-- This Menu Item must have a parent and an action -->
-    <menuitem id="mebel_produksi_menu_act" name="Produksi" parent="mebel_produksi_menu_categ" action="mebel_produksi_action" sequence="10"/>
+    <menuitem id="mebel_produksi_menu_act"
+              name="Produksi/Jasa"
+              parent="mebel_material_menu_categ"
+              action="mebel_produksi_action"
+              sequence="20"/>
 
 </odoo>
